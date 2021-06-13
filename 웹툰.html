@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER WEBTOON</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'/>
+  	<style type="text/css">
+
+  		*{
+			margin: 0;
+			/*padding: 0 16px 0 16px;*/
+			box-sizing: border-box;
+			font-family: 'Nanum Gothic', sans-serif;
+		}
+  		.header{
+  			height: 112px;
+  			margin-left: 32px;
+  			margin-right: 32px;
+  			/*border: 1px solid black;*/
+  		}
+  		#logo{
+			float: left;
+			text-decoration: none;
+			color:  rgb(33,211,105);
+			line-height: 112px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		#menu{
+			float: left;
+			list-style: none;
+			font-size: 14px;
+			/*font-weight: bold;*/
+		}
+		#menu li{
+			float: left;
+		}
+		#menu li a{
+			color: black;
+			text-decoration: none;
+			padding: 0px 16px;
+			line-height: 112px;
+			/*border: 1px solid black;*/
+		}
+		#search-engine{
+			float: right;
+			list-style: none;
+			font-size: 14px;
+			/*font-weight: bold;*/
+		}
+		#search-engine li{
+			float: right;
+		}
+		#search-engine li a{
+			color: black;
+			text-decoration: none;
+			padding: 0px 16px;
+			line-height: 112px;
+			/*border: 1px solid black;*/
+		}
+		/*네비게이션*/
+
+  		
+	    .category{
+	    	height: 80px;
+	    	
+	    	text-align: center;
+	    	/*background-color: yellow;*/
+	    	/*margin-left: 32px;
+  			margin-right: 32px;*/
+  			/*background-color: yellow;*/
+
+	    }
+	    #category-item{
+	    	padding: 0;
+	    	display: inline-block; 
+	    	margin-left: auto;
+	    	margin-right: auto;
+			list-style: none;
+			font-size: 14px;
+			/*margin: 0 auto 0 auto;*/
+			/*font-weight: bold;
+			/*border: 1px solid black;*/
+
+		}
+		#category-item li{
+			/*margin-top: 25px;*/
+			float: left;
+		}
+	    #category-item li:not(:last-child){
+			margin-right: 20px;
+			/*padding: 0px 10px;*/
+			/*background-color: red;*/
+		}
+		#category-item li a{
+			color: black;
+			text-decoration: none;
+			line-height: 50px;
+			border-radius: 15px;
+			padding: 8px 20px;
+			background-color: rgb(239,241,244);
+		}
+
+		#category-item li a:hover{
+			color: white;
+			background-color: rgb(33,211,105);
+		}
+  		.ranking{
+  			height: 1160px;
+  			
+  			margin-left: 32px;
+  			margin-right: 32px;
+  		}
+  		.newtoon{
+  			/*height: 600px;*/
+  			/*border: 1px solid black;*/
+  			margin-left: 32px;
+  			margin-right: 32px;
+  		}
+  		.title{
+  			color:  rgb(33,211,105);
+			margin-top: 18px;
+			width: 100%;
+			display: inline-block;
+			/*border: 1px solid black;*/
+		}
+		.title .rank{
+			font-size: 18px;
+			float: left;
+			font-weight: bold;
+		}
+		.title .more{
+			font-size: 13px;
+			float: right;
+			color: gray;
+			margin-right: 48px;
+		}
+  		.webtoons{
+  			width: 1082px;
+  			height: 480px;
+  			margin-top: 14px;
+  			
+  			margin-left: 0;
+  			display: block;
+  			margin-left: auto;
+			margin-right: auto;
+  			
+
+  		}
+  		
+  		.detail a{
+  			float: left;
+  			/*border: 1px solid black;*/
+  			/*margin-right: 40px;*/
+  			text-decoration: none;
+  			line-height: 24px;
+  			color: black;
+  			margin-bottom: 40px;
+  			margin-left: auto;
+			margin-right: auto;
+			display: block;
+  		}
+  		.detail{
+  			float: left;
+  		}
+  		.detail a:not(:last-child){
+			margin-right: 40px;
+		}
+		
+
+		.img{
+  			font-size: 16px;
+  		}
+
+		.img b{
+			line-height: 28px;
+		}
+		.img span{
+			font-size: 14px;
+		}
+		.score{
+			display: inline-block;
+			/*border: 1px solid black;*/
+			font-size: 14px;
+			margin-left: 10px;
+
+		}
+
+  		
+  		/*.detail .img{
+  			/*margin: 0;
+  			padding: 0;*/
+  			/*display: block;*/
+  			/*margin-right: 50px;
+			float: left;
+			text-align: left;
+			color: black;
+			text-decoration: none;
+			font-size: 16px;
+			line-height: 30px;
+			width: 200px;
+			height: 250px;
+			border: 1px solid black;
+		}
+		.img:not(:last-child){
+			margin-right: 0px;
+		}*/
+
+
+
+		.inner-star::before{color: #FF9600;}
+		.outer-star {position: relative;display: inline-block;color: #CCCCCC;}
+		.inner-star {position: absolute;left: 0;top: 0;width: 0%;overflow: hidden;white-space: nowrap;}
+		.outer-star::before, .inner-star::before {content: '\f005 \f005 \f005 \f005 \f005';font-family: 'Font Awesome 5 free';font-weight: 900;}
+
+		#menu span{
+			text-decoration: underline;
+			text-underline-position: under;
+
+		}
+		.moree{
+			text-align: center;
+			height: 30px;
+			margin-top: 20px;
+			display: block;
+		}
+		.moree b{
+			/*border: 1px solid black;*/
+			border-radius: 15px;
+			padding: 8px 20px;
+			background-color: rgb(33,211,105);
+			color: white;
+			font-size: 14px;
+		}
+
+
+		.footer{
+			display: block;
+			font-size: 12px;
+			height: 204px;
+			
+		}
+		.clear-fix{
+			float: left;
+			width: 100%;
+		}
+
+		.foot{
+	    	height: 80px;
+	    	/*border: 1px solid black;*/
+	    	text-align: center;
+	    	font-size: 12px;
+	    	/*background-color: yellow;*/
+	    	/*margin-left: 32px;
+  			margin-right: 32px;*/
+  			/*background-color: yellow;*/
+
+	    }
+		#naver{
+	    	padding: 0;
+	    	display: inline-block; 
+	    	margin-left: auto;
+	    	margin-right: auto;
+			list-style: none;
+			font-size: 12px;
+			
+			/*font-weight: bold;
+			/*border: 1px solid black;*/
+			
+
+		}
+		#naver li{
+			margin-top: 20px;
+			float: left;
+		}
+	    #naver li:not(:last-child){
+			margin-right: 20px;
+			/*padding: 0px 10px;*/
+			/*background-color: red;*/
+		}
+		#naver li a{
+			color: black;
+			text-decoration: none;
+			line-height: 40px;
+			
+			padding: 8px 20px;
+			
+		}
+
+		
+
+		.sentence{
+			text-align: center;
+		}
+	
+
+		
+		
+
+  		
+  	</style>
+</head>
+<body>
+	<div class="header">
+		<a id="logo" href="홈.html">NAVER 웹툰</a>
+		<ul id="menu">
+			<li><a href="홈.html">홈</a></li>
+			<li><a href="웹툰.html"><span>웹툰</span></a></li>
+			<li><a href="#">베스트도전</a></li>
+			<li><a href="도전만화.html">도전만화</a></li>
+		</ul>
+		<ul id="search-engine">
+			<li><a href="#">My page</a></li>
+			<li><a href="#">Search</a></li>
+		</ul>
+	</div>
+
+	<div class="clear-fix"></div>
+
+
+	<div class="category">
+		<ul id="category-item">
+			
+			<li><a href="#">월요웹툰</a></li>
+			<li><a href="#">화요웹툰</a></li>
+			<li><a href="#">수요웹툰</a></li>
+			<li><a href="#">목요웹툰</a></li>
+			<li><a href="#">금요웹툰</a></li>
+			<li><a href="#">토요웹툰</a></li>
+			<li><a href="#">일요웹툰</a></li>
+			
+		
+		</ul>
+	</div>
+
+	<div class="ranking">
+		
+		<div class="webtoons">
+			<div class="detail">
+
+			<a class="img" href="시청페이지.html"><div><img src="./images/연애혁명.jpg" width="240px">
+			<br><b>연애혁명</b><br><span>232</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.99</div>
+			  </div>
+			</div> 
+			</a>
+			<a class="img" href="#"><div><img src="./images/독립일기.jpg" width="240px">
+			<br><b>독립일기</b><br><span>자까</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.96</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/메리미.jpg" width="240px">
+			<br><b>윌유메리미</b><br><span>마인드C</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.99</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/노곤하개.jpg" width="240px">
+			<br><b>노곤하개</b><br><span>홍끼</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.94</div>
+			  </div>
+			</div>
+			</a>
+			
+
+			</div>
+
+			<div class="detail">
+
+			<a class="img" href="#"><div><img src="./images/풋사과.jpg" width="240px">
+			<br><b>세기말 풋사과 보습학원</b><br><span>순끼</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.98</div>
+			  </div>
+			</div> 
+			</a>
+			<a class="img" href="#"><div><img src="./images/이번생.jpg" width="240px">
+			<br><b>이번 생도 잘 부탁해</b><br><span>이혜</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.92</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/신의탑.jpg" width="240px">
+			<br><b>신의 탑</b><br><span>랑또</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.99</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/맘마미안.jpg" width="240px">
+			<br><b>맘마미안</b><br><span>홍끼</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.94</div>
+			  </div>
+			</div>
+			</a>
+			
+
+			</div>
+
+			<div class="detail">
+
+			<a class="img" href="#"><div><img src="./images/수영만화일기.jpg" width="240px">
+			<br><b>수영만화일기</b><br><span>해모</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.75</div>
+			  </div>
+			</div> 
+			</a>
+			<a class="img" href="#"><div><img src="./images/싸움독학.jpg" width="240px">
+			<br><b>싸움독학</b><br><span>바다</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.96</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/니나.jpg" width="240px">
+			<br><b>니나의 마법서랍</b><br><span>니나</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.88</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/여신강림.jpg" width="240px">
+			<br><b>여신강림</b><br><span>야옹이</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.94</div>
+			  </div>
+			</div>
+			</a>
+			
+
+			</div>
+
+			<div class="detail">
+
+			<a class="img" href="#"><div><img src="./images/모죠의일지.jpg" width="240px">
+			<br><b>모죠의 일지</b><br><span>모죠</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.99</div>
+			  </div>
+			</div> 
+			</a>
+			<a class="img" href="#"><div><img src="./images/낢의삶.jpg" width="240px">
+			<br><b>낢의 삶</b><br><span>낢</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.96</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/바연길.jpg" width="240px">
+			<br><b>바른 연애 길잡이</b><br><span>남수</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.89</div>
+			  </div>
+			</div>
+			</a>
+			<a class="img" href="#"><div><img src="./images/외모지상주의.jpg" width="240px">
+			<br><b>외모지상주의</b><br><span>박태준</span>
+			</div>
+			<div class='RatingStar'>
+			  <div class='RatingScore'>
+			    <div class='outer-star'><div class='inner-star'></div></div><div class="score">9.94</div>
+			  </div>
+			</div>
+			</a>
+			
+
+			</div>
+			<div class="clearfix"></div>
+			<div class="moree"><b>+ 더보기</b></div>
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+	<div class="footer">
+		<hr>
+		<div class="foot">
+			<ul id="naver">
+			
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보처리방침</a></li>
+			<li><a href="#">책임의 한계와 법적고지</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">웹툰 광고 문의</a></li>
+			
+		
+			</ul>
+
+		<div class="copyright">© NAVER WEBTOON Limited</div>
+		<div class="sentence">본 컨텐츠의 저작권은 저자 또는 제공처에 있으며, 이를 무단 이용하는 경우 저작권법등에 따라 법적 책임을 질 수 있습니다.</div>
+		</div>
+
+	</div>
+
+	
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</body>
+</html>
